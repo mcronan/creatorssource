@@ -1,0 +1,141 @@
+body { 
+	background: #E5E3E0 !important;
+}
+
+/*****************************
+	   setting the nav 
+******************************/
+li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+.nav-setter {
+	position: relative;
+}
+
+nav {
+	position: absolute;
+	top: 8px;
+	width: 100%;
+	color: white;
+}
+
+/******************************
+  position the video & others
+******************************/
+.positioner {
+	position: relative;
+}
+
+.the-header {
+	position: absolute;
+	top: -350px;
+	color: white;
+}
+
+/* need to change the font size of the header*/
+h1 {
+	font-size: 45px;
+}
+
+.hero-vid {
+     right: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+     background: url(hero-vid.mp4) no-repeat;
+     max-height:700px;
+}
+
+.the-vid {
+	min-width: 100%;
+}
+
+.btn-success {
+	position: absolute;
+	top: -320px;
+}
+
+
+/******************************
+	   social proof 
+******************************/
+
+.social-proof {
+	height: 90px;
+	width: 100px;
+	border-radius: 90px;
+}
+
+.review-parent {
+	width: 400px;
+}
+
+.review-photo {
+	width: 30%;
+	float: left;
+}
+
+.review-paragraph {
+	width: 60%;
+	float: right;
+}
+
+.social-proof-text {
+	font-size: 14px;
+	background-color: white;
+	padding: 4px;
+	border-radius: 14px;
+}
+
+.social-proof-position {
+	position: absolute;
+	top: 600px;
+}
+
+/*.h3-headers {
+	margin-bottom: px;
+}*/
+
+.border-bottom {
+	border-top: 1px solid gray;
+	padding-bottom:20px;
+
+}
+
+.social-name {
+	font-weight: bold;
+}
+
+/******************************
+	   factory
+*****************************/
+
+.factory-pages {
+	position: absolute;
+	top: 805px;
+	margin-top: 25px;
+}
+
+.factory-image{
+	height: 500px;
+	width: 550px;
+}
+
+/******************************
+	   How it works
+*****************************/
+
+.how-it-works {
+	position: absolute;
+	top: 800px;
+}
+
+.how-it-works-border {
+	border-top: 1px solid gray;
+	padding-bottom:20px;
+	position: absolute;
+	top: 806px;
+}
+
