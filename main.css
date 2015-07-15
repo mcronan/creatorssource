@@ -19,6 +19,7 @@ nav {
 	top: 8px;
 	width: 100%;
 	color: white;
+	font-size: 20px;
 }
 
 /******************************
@@ -45,18 +46,19 @@ h1 {
      top: 0;
      width: 100%;
      background: url(hero-vid.mp4) no-repeat;
-     max-height:700px;
+/*     max-height:500px;
+*/     max-height: 100%;
 }
 
 .the-vid {
 	min-width: 100%;
+ 	max-height: 600px;
 }
 
 .btn-success {
 	position: absolute;
 	top: -320px;
 }
-
 
 /******************************
 	   social proof 
@@ -91,16 +93,18 @@ h1 {
 
 .social-proof-position {
 	position: absolute;
-	top: 600px;
+	top: 20px;
+	left: 35px;
 }
 
-/*.h3-headers {
-	margin-bottom: px;
-}*/
+.social-name-position {
+	position: absolute;
+	top: 120px;
+}
 
 .border-bottom {
 	border-top: 1px solid gray;
-	padding-bottom:20px;
+	padding-bottom: 20px;
 
 }
 
@@ -114,13 +118,20 @@ h1 {
 
 .factory-pages {
 	position: absolute;
-	top: 805px;
-	margin-top: 25px;
+	top: 105px;
+	margin-top: 15px;
+	left: 50px;
 }
 
-.factory-image{
-	height: 500px;
-	width: 550px;
+.factory-image {
+	height: 600px;
+	width: 650px;
+}
+
+.factory-pages-border {
+	position: absolute;
+	top: 105px;
+	margin-top: 5px;
 }
 
 /******************************
@@ -129,13 +140,233 @@ h1 {
 
 .how-it-works {
 	position: absolute;
-	top: 800px;
+	top: 150px;
 }
 
 .how-it-works-border {
 	border-top: 1px solid gray;
-	padding-bottom:20px;
+	padding-bottom:5px;
+	margin-bottom: 5px;
 	position: absolute;
-	top: 806px;
+	top: 156px;
+}
+
+.how-it-works-h4 {
+	padding-bottom:10px;
+	margin-bottom: 10px;
+	position: absolute;
+	top: 155px;
+	left: 35px;
+}
+
+.buttons-position {
+	left: 45px;
+	position: absolute;
+}
+
+.how-it-works-container {
+	margin-bottom: 400px;
+}
+
+/******************************
+	   How it works buttons
+*****************************/
+.brand-button {
+	padding: 15px 35px;
+	border: 2px solid #5fcf80;
+	margin-right: -5px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #5fcf80;
+}
+
+.factory-button {
+	padding:  15px 35px;
+	border: 2px solid #5fcf80;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	font-weight: bold;
+	color: #5fcf80;
+}
+
+.brand-button:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.brand-button:focus {
+	text-decoration: none;
+	color: white;
+}
+
+.brand-button:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.brand-button:active {
+	text-decoration: none;
+	color: white;
+}
+
+.factory-button:hover {
+	text-decoration: none;
+	color: #5fcf80;
+}
+
+.factory-button:focus {
+	text-decoration: none;
+	color: #5fcf80;
+}
+
+.factory-button:visited {
+	text-decoration: none;
+	color: #5fcf80;
+}
+
+.factory-button:active {
+	text-decoration: none;
+	color: #5fcf80 !important;
+}
+/******************************
+	   Icons
+*****************************/
+
+.how-it-works-icons {
+	position: absolute;
+	top: 170px;
+	font-size: 40px;
+	text-align: center;
+}
+
+.how-it-works-text {
+	position: absolute;
+	top: 180px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.factory-display {
+	display: none;
+	padding-top: 50px;
+}
+.brand-display {
+	padding-top: 50px;
+}
+
+
+/******************************
+	   Footer
+*****************************/
+.footer {
+	background: #4F4E4D;
+	height: 350px;
+}
+
+/******************************
+	   Brand Profile Page
+*****************************/
+
+/******************************
+	  Company Title Row
+*****************************/
+.company-title {
+	height: 210px;
+	border-bottom: 2px solid gray;
+}
+
+.company-title-inline {
+	display: inline-block;
+}
+
+.h4-position {
+	position: absolute;
+	top: 50px;
+}
+
+/******************************
+	  Info Containers
+*****************************/
+.about-container {
+	height: 120px;
+}
+
+.info-container {
+	position: absolute;
+	bottom: -160px;
+/*	border: 1px dashed red;
+*/	height: 90px;
+
+}
+
+.info-container-2 {
+	height: 90px;
+	position: absolute;
+	bottom: -270px;
+/*	border: 1px dashed red;
+*/}
+
+.info-container-3 {
+	height: 90px;
+	position: absolute;
+	bottom: -375px;
+/*	border: 1px dashed red;
+*/}
+
+.inner-container {
+	border-bottom: 2px solid gray;
+	height: 90px;
+
+}
+
+.border-div {
+	border-top: 1px solid gray;
+	position: absolute;
+	top: 20px;
+}
+
+.border-div-2 {
+	border-top: 1px solid gray;
+	position: absolute;
+	top: 120px;
+}
+
+.border-div-3 {
+	border-top: 1px solid gray;
+	position: absolute;
+	top: 210px;
+}
+
+.inner-container-2 {
+	height: 100px;
+	border: 1px dashed red;
+}
+
+.outer-container-2 {
+	position: absolute;
+	bottom: 300px;
+}
+
+.reviews {
+	position: absolute;
+	bottom: -520px;
+	height: 100px;
+}
+
+.inner-container-3 {
+	height: 550px;
+	border: 1px red dashed;
+}
+
+.new-review {
+	height: 200px;
+	width: 200px;
+	border: 1px dashed red;
+	position: absolute;
+	top: 1200px;
+	left: 400px;
 }
 
