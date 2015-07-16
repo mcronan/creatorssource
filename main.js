@@ -41,17 +41,35 @@ $(function(){
  	})
 
  // *******************************
- // 	    Reviews Submission
+ // 	  Ratings &  Reviews 
  //  ******************************//
+
+ 	var revArray = [];
+	var revValue = $('#review').val()
 
 	var Review = function(review){
 		this.review = review;
 	}
-
+	
+	//****** for the rating stars *******//
 	$('#submit').on('click', function(){
-		var theReview = $('#review').val();
-		$('.new-review').append(theReview);
+			var newReview = new Review(revValue)
+			revArray.push(newReview)
+			$('.number').text(revArray.length)
+	})	
 
+
+ // *******************************
+ // 	  	  For the reviews
+ //  ******************************//
+ 	$('#submit').on('click', function(){
+		$('.rating').remove();
+		// this empties out the textbox
+		// assigns the contents of textbox to variable
+		var theReview = $('#review').val();
+		var bestReview = new Review(theReview)
+		$('.newest-review').prepend('<div class="review-text">' + bestReview.review + '</div>')
+		$('#review').val('')
 	})
 
  // *******************************
@@ -89,12 +107,42 @@ $(function(){
 
  	})
 
+/******************************
+	  Add to Favourites
+*****************************/
+// create a class creator for favourites
+// click-event on 'add to favourites'
+// this will create a new instance of this class
+// this will change the button to "added to favourites"
+// make a div that shows your favourites
 
+	var favArray = []
+	var theString = ''
+	var Favourite = function(fav) {
+		this.fav = fav;
+	}
 
- 	// $('.rating-1, .rating-2, .rating-3, .rating-4,.rating-5').on('click', function(){
- 	// 	$(this).replaceWith('<i class="fa fa-star"></i>')
- 
- 	// })
+	$('.favourites').on('click', function(){
+		var favTitle = 'Firey Steel'
+		var newFav = new Favourite(favTitle)
+		favArray.push(newFav)
+		console.log(favArray)
+
+		var favPageString = favArray.map(function(name) {
+			return name['fav'];
+		})
+		var stringer = favPageString.join('')
+		console.log(stringer)
+		$('.test-position').text(stringer);
+
+		// var pushString = theString.push(stringer)
+		// $('.test-position').text("hello");
+
+	})
+
+	$('.test-position').text(theString);
+	console.log(theString)
+
 
 });
-
+   
