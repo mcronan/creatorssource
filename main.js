@@ -110,38 +110,71 @@ $(function(){
 /******************************
 	  Add to Favourites
 *****************************/
-// create a class creator for favourites
-// click-event on 'add to favourites'
-// this will create a new instance of this class
-// this will change the button to "added to favourites"
-// make a div that shows your favourites
-
 	var favArray = []
-	var theString = ''
+	var finalFavArray = []
+	// new class for favourites 
 	var Favourite = function(fav) {
 		this.fav = fav;
 	}
 
 	$('.favourites').on('click', function(){
+		// the title of the page, more dynamic way of doing this?
 		var favTitle = 'Firey Steel'
 		var newFav = new Favourite(favTitle)
+		// push object to new array
 		favArray.push(newFav)
-		console.log(favArray)
+		// loop over the array, get value of object
+		favArray.forEach(function(name) {
+			finalFavArray.push((name['fav']))
+			})
 
-		var favPageString = favArray.map(function(name) {
-			return name['fav'];
-		})
-		var stringer = favPageString.join('')
-		console.log(stringer)
-		$('.test-position').text(stringer);
+		// loop over array, push to local storage
+		finalFavArray.forEach(function(x){
+		localStorage.setItem('page', JSON.stringify(x))
+			})
+	});
+	
+	
 
-		// var pushString = theString.push(stringer)
-		// $('.test-position').text("hello");
+ $('.favourites').on('click', function() {
+ 	var $this = $(this)
+ 	$this.toggleClass('favourites')
+ 	if($this.hasClass('favourites')){
+ 		$this.text('+ Add to favourites')
+ 	} else {
+ 		$this.text('Remove from favourites')
+ 	}
+ })
+ 	
+ 	// $(this).replaceWith('<button type="button" class="btn btn-success remove-from-favourites">Remove from favourites</button>')
+ // })
 
-	})
+ // $('.remove-from-favourites').on('click', function() {
+ // 	$('.replace-button').html('<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button>')
+ // })
 
-	$('.test-position').text(theString);
-	console.log(theString)
+
+// this interval timer does not work
+
+	// setInterval(function() {
+ // 	if(favArray.length > 0) {
+ // 		var myFavPage = localStorage.getItem('page')
+	// 	if(myFavPage !== null) {
+	// 	//remove the quotes
+	// 	var noQuotes = myFavPage.replace(/['"]+/g, '')
+	// 	}
+	// 	$('.tester').text(noQuotes)
+ // 		 } }, 1000);
+
+	// get item from local storage
+		var myFavPage = localStorage.getItem('page')
+		if(myFavPage !== null) {
+		//remove the quotes
+		var noQuotes = myFavPage.replace(/['"]+/g, '')
+		}
+		// $('.tester').html('<div class="fav-box">' + noQuotes + '</div>' )
+		$('.fav-box').html(noQuotes)
+
 
 
 });
