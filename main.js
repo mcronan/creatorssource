@@ -133,48 +133,91 @@ $(function(){
 		localStorage.setItem('page', JSON.stringify(x))
 			})
 	});
-	
-	
 
- $('.favourites').on('click', function() {
- 	var $this = $(this)
- 	$this.toggleClass('favourites')
- 	if($this.hasClass('favourites')){
- 		$this.text('+ Add to favourites')
- 	} else {
- 		$this.text('Remove from favourites')
- 	}
- })
+	 $('.favourites').on('click', function() {
+	 	var $this = $(this)
+	 	$this.toggleClass('favourites')
+	 	if($this.hasClass('favourites')){
+	 		$this.text('+ Add to favourites')
+	 	} else {
+	 		$this.text('Remove from favourites')
+	 	}
+	 })
  	
- 	// $(this).replaceWith('<button type="button" class="btn btn-success remove-from-favourites">Remove from favourites</button>')
- // })
+	 	// $(this).replaceWith('<button type="button" class="btn btn-success remove-from-favourites">Remove from favourites</button>')
+	 // })
 
- // $('.remove-from-favourites').on('click', function() {
- // 	$('.replace-button').html('<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button>')
- // })
+	 // $('.remove-from-favourites').on('click', function() {
+	 // 	$('.replace-button').html('<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button>')
+	 // })
 
 
-// this interval timer does not work
+	// this interval timer does not work
 
-	// setInterval(function() {
- // 	if(favArray.length > 0) {
- // 		var myFavPage = localStorage.getItem('page')
-	// 	if(myFavPage !== null) {
-	// 	//remove the quotes
-	// 	var noQuotes = myFavPage.replace(/['"]+/g, '')
-	// 	}
-	// 	$('.tester').text(noQuotes)
- // 		 } }, 1000);
+		// setInterval(function() {
+	 // 	if(favArray.length > 0) {
+	 // 		var myFavPage = localStorage.getItem('page')
+		// 	if(myFavPage !== null) {
+		// 	//remove the quotes
+		// 	var noQuotes = myFavPage.replace(/['"]+/g, '')
+		// 	}
+		// 	$('.tester').text(noQuotes)
+	 // 		 } }, 1000);
 
-	// get item from local storage
-		var myFavPage = localStorage.getItem('page')
-		if(myFavPage !== null) {
-		//remove the quotes
-		var noQuotes = myFavPage.replace(/['"]+/g, '')
-		}
-		// $('.tester').html('<div class="fav-box">' + noQuotes + '</div>' )
-		$('.fav-box').html(noQuotes)
+		// get item from local storage
+			var myFavPage = localStorage.getItem('page')
+			if(myFavPage !== null) {
+			//remove the quotes
+			var noQuotes = myFavPage.replace(/['"]+/g, '')
+			}
+			// $('.tester').html('<div class="fav-box">' + noQuotes + '</div>' )
+			$('.page-box').html(noQuotes)
 
+	/******************************
+		  Message Company
+	*****************************/
+
+	$('.message').on('click',function(){
+		$('#basicModal')
+
+	})
+
+	var pmArray = []
+	var finalPmArray = []
+	var PrivateMessage = function(pm) {
+		this.pm = pm;
+	}
+
+	$("#submit-pm").on('click', function(){
+
+	// get value of submission box
+	var pmValue = $('#private-message').val();
+	var sendPm = new PrivateMessage(pmValue)
+	// push to array
+	pmArray.push(sendPm)
+
+	pmArray.forEach(function(m){
+		finalPmArray.push(m['pm'])
+		})
+
+	finalPmArray.forEach(function(finalMess){
+		localStorage.setItem('message', JSON.stringify(finalMess))
+		})
+	// hide modal after clicking submit
+	$('#basicModal').modal('hide')
+	
+	
+	})
+
+	var getPm = localStorage.getItem('message')
+	if(getPm !== null) {
+		var removeQuotes = getPm.replace(/['"]+/g, '')
+		$('.pm-box').append(removeQuotes)
+	}
+
+/************* add recipient to dashboard ***********/
+/** should be able to do this when clicking on submit in PM **/
+		$('.pm-recipient-box').append(noQuotes)
 
 
 });

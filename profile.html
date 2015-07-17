@@ -2,6 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="main.css"></link>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></link>
@@ -14,18 +17,18 @@
 		<div class="positioner">
 		 <div class="row">
 		 	<div class="col-sm-12 hero-vid">
-				<img src="http://placehold.it/900x600" class="the-vid">
+				<img src="steel-factory.jpg" class="the-vid">
 			</div>
   	  	 </div>
 	 
 	  	<div class="row">
 			<nav>
 				<ul>
-					<li class="col-sm-2"> Creator's Source</li>
-					<li class="col-sm-offset-6 col-sm-1"> Blog </li>
-					<li class="col-sm-1"> Pricing </li>
-					<li class="col-sm-1"> Log In</li>
-					<li class="col-sm-1"> Sign Up</li>
+					<li class="inline col-sm-2"> Creator's Source</li>
+					<li class="inline col-sm-offset-6 col-sm-1"> Blog </li>
+					<li class="inline col-sm-1"> Pricing </li>
+					<li class="inline col-sm-1"> Log In</li>
+					<li class="inline col-sm-1"> Sign Up</li>
 				</ul>
 			</nav>
 		 </div>
@@ -34,14 +37,16 @@
 		<div class="company-title">
 			<div class="row">
 				<div class="col-sm-offset-1 col-sm-2">
-					<img src="http://placehold.it/180x180">
+					<img class="factory-logo" src="factory_logo.jpg">
 				</div>
 				<div class="col-sm-8">
 					<h2 class="firey"> Firey Steel Company</h2> 
 					<br>
 					<h4 class="h4-position"> Steel making and smelting 
 					<div class="replace-button">
-					<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button>
+					<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button> 
+					<br>
+					<a href='#' class="btn btn-info message" data-toggle="modal" data-target="#basicModal">Message Company</a>
 					</h4> 
 				</div>
 
@@ -77,6 +82,25 @@
 				</div>
 			</div>
 		</div>	
+		
+		<div class="modal fade" id="basicModal" tabindex="-1">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">Private message to Fiery Steel</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<textarea class="form-control" rows="3" id="private-message" placeholder="Enter message here"></textarea>
+		   <!--      <p>One fine body&hellip;</p> -->
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" id="submit-pm">Send Message</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
 		<!-- <div class="row">
 				<div class="col-sm-offset-1 col-sm-8 border-div-2">	
@@ -141,13 +165,51 @@
 			 </div>
 		    </div>
 		</div>
-		<!-- <footer> 
+		
+			
+	<footer> 
 			<div class="row">
-				<div class="col-sm-12 footer">
-			</div>
-	    </footer> -->
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			   <div class="col-sm-12 footer-dash">
+			   <div class="li-container">
+			   	<div class="col-sm-4">
+					<ul>
+						<li class="footer-li first-li">About</li>
+						<li class="footer-li">Home</li>
+						<li class="footer-li">Blog</li>
+						<li class="footer-li">Projects</li>
+						<li class="footer-li">Brands</li>
+						<li class="footer-li">Factories</li>
+						<li class="footer-li">Log in </li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul>
+						<li class="footer-li first-li">Company</li>
+						<li class="footer-li">Team</li>
+						<li class="footer-li">Jobs</li>
+						<li class="footer-li">Press</li>
+						<li class="footer-li">Stories</li>
+						<li class="footer-li">FAQ</li>
+						<li class="footer-li">Support </li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul>
+					    <li class="footer-li first-li">Contact</li>
+						<li class="footer-li">Twitter</li>
+						<li class="footer-li">Facebook</li>
+						<li class="footer-li">Instagram</li>
+						<li class="footer-li">LinkedIn</li>
+						<li class="footer-li">Snapchat</li>
+					</ul>
+				</div>
+			<div class="li-container">
 
+			</div>
+		 </div>
+ </footer>
+
+		
 		<script src="main.js"></script>
 	</body>
 </html>	
