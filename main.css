@@ -1,3 +1,13 @@
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+a:active {
+	text-decoration: none;
+	color: white;
+}
+
+
 body { 
 	background: #E5E3E0 !important;
 }
@@ -149,7 +159,8 @@ h1 {
 	top: 105px;
 	margin-top: 15px;
 	left: 50px;
-}
+/*	border: 1px black solid;
+*/}
 
 .factory-image {
 	height: 600px;
@@ -423,12 +434,16 @@ h1 {
 	border: 1px red dashed;
 }
 
+.fa.fa-star {
+	color: #DEDE0B;
+}
+
 /******************************
 	  Review
 *****************************/
 .input-review {
 	position: absolute;
-	top: 1380px;
+	top: 1300px;
 	left: 35px;
 	width: 300px;
 }
@@ -457,6 +472,12 @@ h1 {
 	left: 150px;
 }
 
+.past-reviews {
+	position: absolute;
+	top: 360px;
+	left: 150px;
+}
+
 /******************************
 	  This must be positioned static/
 	  not positioned for new
@@ -468,11 +489,15 @@ h1 {
 	width: 350px;
 	background: #F2F0ED;
 	margin-bottom: 10px;
+	padding: 5px;
+	border-radius: 8px;
 }
 
 /******************************
 	  Person Profile
 *****************************/
+
+
 .test-position {
 	position: relative;
 }
@@ -533,6 +558,10 @@ h1 {
 	border-radius: 5px;
 }
 
-.nav-dash {
+#nav-dash {
+	color: #55BA73;
+}
+
+#dashboard-li {
 	color: #55BA73;
 }
