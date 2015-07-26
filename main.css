@@ -312,6 +312,13 @@ h1 {
 	position: absolute;
 }
 
+.footer-factory {
+	background: #4F4E4D;
+	height: 350px;
+	top: 100px;
+	position: absolute;
+}
+
 .footer-li {
 	list-style-type: none;
 	color: white;
@@ -357,32 +364,31 @@ h1 {
 	height: 120px;
 }
 
-.info-container {
-	position: absolute;
-	bottom: -160px;
-/*	border: 1px dashed red;
-*/	height: 90px;
+.factory-container {
+
+	height: 90px;
+	margin: 40px;
 
 }
 
-.info-container-2 {
+.management-container {
 	height: 90px;
-	position: absolute;
-	bottom: -270px;
-/*	border: 1px dashed red;
-*/}
+	margin: 40px;
+}
 
-.info-container-3 {
+.location-container {
 	height: 90px;
-	position: absolute;
-	bottom: -375px;
-/*	border: 1px dashed red;
-*/}
+	margin: 40px;
+}
 
 .inner-container {
 	border-bottom: 2px solid gray;
 	height: 90px;
+}
 
+.inner-container-6 {
+	border-bottom: 2px solid gray;
+	height: 200px;
 }
 
 .border-div {
@@ -403,10 +409,6 @@ h1 {
 	top: 210px;
 }
 
-.inner-container-2 {
-	height: 100px;
-	border: 1px dashed red;
-}
 
 .outer-container-2 {
 	position: absolute;
@@ -416,49 +418,42 @@ h1 {
 	  Rating
 *****************************/
 .rating-header {
-	position: absolute;
-	bottom: -404px;
 	height: 20px;
-	left: 67px
 }
 
 .rating {
 	position: absolute;
-	bottom: -460px;
 	height: 20px;
-	left: 67px
-}
-
-.inner-container-3 {
-	height: 550px;
-	border: 1px red dashed;
 }
 
 .fa.fa-star {
 	color: #DEDE0B;
 }
 
+.starrr { 
+	display: inline-block; }
+
+.starrr i {
+
+  font-size: 16px;
+
+  padding: 0 1px;
+
+  cursor: pointer;
+
+  color: #ffd119;
+
+}
+
+
+
+
 /******************************
 	  Review
 *****************************/
 .input-review {
-	position: absolute;
-	top: 1300px;
-	left: 35px;
-	width: 300px;
 }
 
-.new-review {
-	height: 150px;
-	width: 300px;
-	border: 1px solid #C7C5C3;
-	border-radius: 5px;
-	position: absolute;
-	top: 420px;
-	left: 155px;
-	display: none;
-	background-color: #F7F5F2;
-}
 
 .review-box {
 	height: 150px;
@@ -467,15 +462,11 @@ h1 {
 }
 
 .newest-review {
-	position: absolute;
-	top: 400px;
-	left: 150px;
+
 }
 
 .past-reviews {
-	position: absolute;
-	top: 360px;
-	left: 150px;
+
 }
 
 /******************************
@@ -494,9 +485,8 @@ h1 {
 }
 
 /******************************
-	  Person Profile
+	 	Dasboard
 *****************************/
-
 
 .test-position {
 	position: relative;
@@ -545,9 +535,9 @@ h1 {
 	border: 1px solid #C7C5C3;
 	color: #525453;
 	border-radius: 5px;
-
 }
-.pm-box {
+
+.pm-body-box {
 	height: 100px;
 	width: 200px;
 	background-color: #F2F0ED;
@@ -556,6 +546,18 @@ h1 {
 	position: relative;
 	border: 1px solid #C7C5C3;
 	border-radius: 5px;
+}
+
+.pm-time-box {
+	height: 100px;
+	width: 200px;
+	background-color: #F2F0ED;
+	color: #525453;
+	font-size: 20px;
+	position: relative;
+	border: 1px solid #C7C5C3;
+	border-radius: 5px;
+	margin-top: 23px;
 }
 
 #nav-dash {

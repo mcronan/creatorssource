@@ -75,6 +75,11 @@ $(function(){
  // *******************************
  // 	  	  Ratings
  //  ******************************//
+ 
+ 	// Using toggle
+ 	// $('.rating-1').on('click', function(){
+ 	// 	$(this).find('i').toggleClass('fa fa-star')
+ 	// })
 
  	$('.rating-1').on('click', function(){
  	$(this).replaceWith('<i class="fa fa-star"></i>')
@@ -110,6 +115,8 @@ $(function(){
 /******************************
 	  Add to Favourites
 *****************************/
+	var favTitle = $('.firey').text()
+
 	var favArray = []
 	var finalFavArray = []
 	// new class for favourites 
@@ -118,12 +125,12 @@ $(function(){
 	}
 
 	$('.favourites').on('click', function(){
-		// the title of the page, more dynamic way of doing this?
-		var favTitle = 'Firey Steel'
+
 		var newFav = new Favourite(favTitle)
 		// push object to new array
 		favArray.push(newFav)
 		// loop over the array, get value of object
+		
 		favArray.forEach(function(name) {
 			finalFavArray.push((name['fav']))
 			})
@@ -133,24 +140,6 @@ $(function(){
 		localStorage.setItem('page', JSON.stringify(x))
 			})
 	});
-
-	 $('.favourites').on('click', function() {
-	 	var $this = $(this)
-	 	$this.toggleClass('favourites')
-	 	if($this.hasClass('favourites')){
-	 		$this.text('+ Add to favourites')
-	 	} else {
-	 		$this.text('Remove from favourites')
-	 	}
-	 })
- 	
-	 	// $(this).replaceWith('<button type="button" class="btn btn-success remove-from-favourites">Remove from favourites</button>')
-	 // })
-
-	 // $('.remove-from-favourites').on('click', function() {
-	 // 	$('.replace-button').html('<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button>')
-	 // })
-
 
 	// this interval timer does not work
 
@@ -173,9 +162,27 @@ $(function(){
 			// $('.tester').html('<div class="fav-box">' + noQuotes + '</div>' )
 			$('.page-box').html(noQuotes)
 
+
+ 	// toggle the favourite button display 
+	$('.favourites').on('click', function() {
+	 	var $this = $(this)
+	 	$this.toggleClass('favourites')
+	 	if($this.hasClass('favourites')){
+	 		$this.text('+ Add to favourites')
+	 		// remove from local storge
+	 		localStorage.removeItem('page')
+
+	 	} else {
+	 		$this.text('Remove from favourites')
+	 	}
+	 })
+
 	/******************************
 		  Message Company
 	*****************************/
+	
+	// get value of page title fron <h2>
+	var pageTitle = $('.firey').text()
 
 	$('.message').on('click',function(){
 		$('#basicModal')
@@ -184,40 +191,78 @@ $(function(){
 
 	var pmArray = []
 	var finalPmArray = []
-	var PrivateMessage = function(pm) {
+	var PrivateMessage = function(pm, recipient, timestamp) {
 		this.pm = pm;
+		this.recipient = recipient
+		this.timestamp = Date(Date.now())
 	}
 
 	$("#submit-pm").on('click', function(){
 
-	// get value of submission box
-	var pmValue = $('#private-message').val();
-	var sendPm = new PrivateMessage(pmValue)
-	// push to array
-	pmArray.push(sendPm)
+		// get value of submission box
+		var pmValue = $('#private-message').val();
+		
+		// new instance 
+		var sendPm = new PrivateMessage(pmValue, pageTitle, Date.now())
 
-	pmArray.forEach(function(m){
-		finalPmArray.push(m['pm'])
-		})
+		// push to array
+		pmArray.push(sendPm)
 
-	finalPmArray.forEach(function(finalMess){
-		localStorage.setItem('message', JSON.stringify(finalMess))
-		})
-	// hide modal after clicking submit
-	$('#basicModal').modal('hide')
-	
-	
+		// for the message
+		pmArray.forEach(function(m){
+			finalPmArray.push(m['pm'])
+			})
+
+		finalPmArray.forEach(function(finalMess){
+			localStorage.setItem('message', JSON.stringify(finalMess))
+			})
+
+		// for the recipient title
+		pmArray.forEach(function(rt){
+			finalPmArray.push(rt['recipient'])
+			})
+
+		finalPmArray.forEach(function(recipTitle){
+			localStorage.setItem('recipient-title', JSON.stringify(recipTitle))
+			})
+
+		// for the timestamp
+		pmArray.forEach(function(time){
+			finalPmArray.push(time['timestamp'])
+			})
+
+		finalPmArray.forEach(function(theTime){
+			localStorage.setItem('dateTime', JSON.stringify(theTime))
+			})
+
+
+		// hide modal after clicking submit
+		$('#basicModal').modal('hide')
 	})
-
+	
+	// pull message from local storage
 	var getPm = localStorage.getItem('message')
 	if(getPm !== null) {
 		var removeQuotes = getPm.replace(/['"]+/g, '')
-		$('.pm-box').append(removeQuotes)
+		$('.pm-body-box').append(removeQuotes)
 	}
 
-/************* add recipient to dashboard ***********/
-/** should be able to do this when clicking on submit in PM **/
-		$('.pm-recipient-box').append(noQuotes)
+	// pull Recipient Title from local storage
+	var getTitle = localStorage.getItem('recipient-title')
+		if(getTitle !== null) {
+		var removeQuotesRecipient = getTitle.replace(/['"]+/g, '')
+		$('.pm-recipient-box').append(removeQuotesRecipient)
+	}
+
+	// pull Timestamp from local storage
+	var getTime = localStorage.getItem('dateTime')
+		if(getTime !== null) {
+		var removeQuotesTime = getTime.replace(/['"]+/g, '')
+		$('.pm-time-box').append(removeQuotesTime)
+	}
+
+	
+
 
 
 });

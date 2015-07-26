@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="main.css"></link>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
@@ -28,30 +28,30 @@
 					<li class="inline col-sm-offset-5 col-sm-1"> Blog </li>
 					<a href="person-profile.html"> <li class="inline col-sm-2"> Dashboard </li></a>
 <!-- 					<li class="inline col-sm-1"> Search </li>
- -->					<li class="inline col-sm-2"> Sign Out</li>
+ -->			   <li class="inline col-sm-2"> Sign Out</li>
 				</ul>
 			</nav>
-		 </div>
 		</div>
+		</div>
+
 
 		<div class="company-title">
 			<div class="row">
-				<div class="col-sm-offset-1 col-sm-2">
-					<img class="factory-logo" src="factory_logo.jpg">
-				</div>
-				<div class="col-sm-8">
-					<h2 class="firey"> Firey Steel Company</h2> 
-					<br>
-					<h4 class="h4-position"> Steel making and smelting 
-					<div class="replace-button">
-					<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button> 
-					<br>
-					<a href='#' class="btn btn-info message" data-toggle="modal" data-target="#basicModal">Message Company</a>
-					</h4> 
-				</div>
-
-				</div>	
-			</div>
+			     <div class="col-sm-offset-1 col-sm-2">
+						<img class="factory-logo" src="factory_logo.jpg">
+				  </div>
+				  <div class="col-sm-8">
+					    <h2 class="firey"> Firey Steel Company</h2> 
+						<h4 class="h4-position"> Steel making and smelting 
+						<div class="replace-button">
+							<!-- add to favourites here -->
+						<button type="button" class="btn btn-warning favourites"> + Add to Favourites</button> 
+						<br>
+							<!-- Message company -->
+						<a href='#' class="btn btn-info message" data-toggle="modal" data-target="#basicModal">Message Company</a>
+						</h4> 
+				    </div>
+			 </div>	
 		</div>
 
 		<div class="about-container">
@@ -66,23 +66,9 @@
 
 		<div class="row">
 				<div class="col-sm-12 border-div">	
-			</div>
+			    </div>
 		</div>
 
-		<div class="info-container">
-			<div class="row">
-				<div class="inner-container">
-					<div class="col-sm-offset-1 col-sm-3">
-
-						<h5> The Factory </h5>
-					</div>
-					<div class="col-sm-6">
-						<p> Desktop publishing packages and web page editors now use.esktop publishing packages and web page editors now use. </p>
-					</div>
-				</div>
-			</div>
-		</div>	
-		
 		<div class="modal fade" id="basicModal" tabindex="-1">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
@@ -102,16 +88,28 @@
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 
-		<!-- <div class="row">
-				<div class="col-sm-offset-1 col-sm-8 border-div-2">	
-			</div>
-		</div> -->
+		
 	
-		<div class="info-container-2">
+	<!-- Factory, Management and Location -->
+		<div class="factory-container">
+			<div class="row">
+				<div class="inner-container">
+					<div class="col-sm-offset-1 col-sm-2">
+
+						<h5> The Factory </h5>
+					</div>
+					<div class="col-sm-6">
+						<p> Desktop publishing packages and web page editors now use.esktop publishing packages and web page editors now use. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="management-container">
 			<div class="row">
 				<div class="inner-container">
 
-				 <div class="col-sm-offset-1 col-sm-3">
+				 <div class="col-sm-offset-1 col-sm-2">
 					<h5> The Management </h5>
 				</div>
 					<div class="col-sm-6">
@@ -121,17 +119,12 @@
 			</div>	
 		</div>
 
-		<!-- <div class="row">
-				<div class="col-sm-offset-1 col-sm-8 border-div-3">	
-			</div>
-		</div> -->
-
-		<div class="info-container-3">
+		<div class="location-container">
 			<div class="row">
-			 <div class="inner-container">
-				<div class="col-sm-offset-1 col-sm-3">
+			 	<div class="inner-container">
+					<div class="col-sm-offset-1 col-sm-2">
 					<h5> The Location </h5>
-				</div>
+					</div>
 					<div class="col-sm-6">
 						<p>Desktop publishing packages and web page editors now useDesktop publishing packages and web page editors now use. </p>
 					</div>
@@ -139,45 +132,54 @@
 			</div>	
 		</div>
     
+    	<!-- Reviews and Ratings -->
+    	<!--  Reviews Header-->
+
 		<div class="row rating-header"> 
 				<div class="col-sm-offset-1 col-sm-1">
 					<h4 class="number"></h4>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-2">
 					<h4 class="num-of-reviews"> Reviews </h4>
 				</div>
+				
 		</div>
-		<div class="row rating">
-			<div class="col-sm-offset-1 col-sm-12">
+
+		<div class="row">
+			<div class="col-sm-1">
+				<p>  </p>
+			</div>
+		</div>
+<div class="starrr"></div>
+
+<!-- Rating Stars -->
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-2">
 				<i class="rating-1 fa fa-star-o"></i> <i class="rating-2 fa fa-star-o"></i> <i class="rating-3 fa fa-star-o"></i> <i class="rating-4 fa fa-star-o"></i> <i class="rating-5 fa fa-star-o"></i>
 			</div>
 		</div>
-		    <div class="rows input-review">
-				<div class="col-sm-offset-1 col-sm-12"> 
-					<textarea class="form-control" rows="6" id="review" placeholder="Leave your review here!"></textarea>
+
+<!-- Text Form & New Reviews -->
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-3">
+					
+					<textarea class="form-control" rows="3" id="review" placeholder="Leave your review here!"></textarea>
+					
 					<button type="submit" class="btn btn-primary" id="submit"> Submit </button>
-		        </div>
-		   </div>
-
-		<div class="row">
-			 <div class="col-sm-offset-4 col-sm-12">
-				<h5 class="past-reviews"> Past reviews: </h5>
-			 
-		    </div>
+			</div>
+			<div class="col-sm-3">
+				<h5> Past reviews: </h5>
+				<br>
+				<div class="newest-review"></div>
+			</div>
 		</div>
 
 
-		<div class="row">
-			 <div class="col-sm-offset-4 col-sm-8">
-				<div class="newest-review">
-			 </div>
-		    </div>
-		</div>
-		
-			
+
+
 	<footer> 
 			<div class="row">
-			   <div class="col-sm-12 footer-dash">
+			   <div class="col-sm-12 footer-factory">
 			   <div class="li-container">
 			   	<div class="col-sm-4">
 					<ul>
@@ -203,7 +205,7 @@
 				</div>
 				<div class="col-sm-4">
 					<ul>
-					    <li class="footer-li first-li">Contact</li>
+				    <li class="footer-li first-li">Contact</li>
 						<li class="footer-li">Twitter</li>
 						<li class="footer-li">Facebook</li>
 						<li class="footer-li">Instagram</li>
@@ -212,12 +214,14 @@
 					</ul>
 				</div>
 			<div class="li-container">
-
 			</div>
 		 </div>
  </footer>
 
-		
+	
+	
+		<script src="starrr.min.js"></script>
+
 		<script src="main.js"></script>
 	</body>
 </html>	
