@@ -7,6 +7,10 @@ a:active {
 	color: white;
 }
 
+a:hover {
+	text-decoration: none;
+	color: white  !important;
+}
 
 body { 
 	background: #E5E3E0 !important;
